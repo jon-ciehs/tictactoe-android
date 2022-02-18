@@ -57,20 +57,20 @@ class Board() {
                 if (player == "-") continue
 
                 if (column + 2 < sqSize &&
-                        player == getCellValue(row, (column+1)) &&
-                        player == getCellValue(row, (column+2))) { return true }
+                        player == getCellValue(row, column+1) &&
+                        player == getCellValue(row, column+2)) { return true }
 
                 if (row + 2 < sqSize) {
                     if (player == getCellValue(row+1, column) &&
                         player == getCellValue(row+2, column)) { return true }
 
                     if (column + 2 < sqSize &&
-                        player == getCellValue(row+1, (column+1)) &&
-                        player == getCellValue(row+2, (column+2))) { return true }
+                        player == getCellValue(row+1, column+1) &&
+                        player == getCellValue(row+2, column+2)) { return true }
 
                     if (column - 2 >= 0 &&
-                        player == getCellValue(row+1, (column-1)) &&
-                        player == getCellValue(row+2, (column-2))) { return true }
+                        player == getCellValue(row+1, column-1) &&
+                        player == getCellValue(row+2, column-2)) { return true }
                 }
             }
         }
